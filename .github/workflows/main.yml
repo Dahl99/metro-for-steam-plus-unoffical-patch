@@ -1,0 +1,22 @@
+name: Create release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create release archives
+        run: |
+          sudo apt install zip
+          zip -r metro-for-steam-skin.zip metro-for-steam-skin
+          tar -czf metro-for-steam-skin.tar.gz metro-for-steam-skin
+        
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "metro-for-steam-skin.zip,metro-for-steam-skin.tar.gz"
+
