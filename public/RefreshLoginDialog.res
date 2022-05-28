@@ -170,6 +170,11 @@
 	}
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+		place { control="ErrorInfoLabel" margin-top=46 margin-left=32 }
+		
+		place { control="TwoFactorLabel" y=34 start=UserNameLabel dir=down } // below pause
+		place { control="TwoFactorEdit,SavePasswordCheck" y=8 start=PasswordEdit dir=down spacing=8 }
+		place { control="LoginButton" start=SavePasswordCheck dir=down spacing=16 }
+		place { control="CancelButton" start=LoginButton x=8 }
 	}
 }

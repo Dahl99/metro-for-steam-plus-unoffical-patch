@@ -46,19 +46,9 @@
 		"zpos"	"-1"
 		style="status"
 	}
-	
+
 	styles
-	{		
-		CServerBrowserDialog
-		{
-			bgcolor=ClientBG
-			render_bg
-			{
-				0="fill( x0, y0, x1, y1, ClientBG )"
-				1="fill( x0, y0, x1, y0+40, FrameBorder )"
-				2="fill( x0, y0, x1, y0+39, Header_Dark )"
-			}
-		}
+	{
 		status
 		{
 			bgcolor="ClientBG"
@@ -67,12 +57,10 @@
 	}
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-		
 		//List
 		place { control="GameTabs" margin-top=12 height=max width=max }
-		
+		place [$OSX] { control="GameTabs" margin-top=39 height=max width=max }
 		//Bottom
-		place { control="StatusLabel" height=0 }
+		place { control="StatusLabel" width=1 align=right }
 	}
 }

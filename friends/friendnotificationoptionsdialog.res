@@ -225,31 +225,16 @@
 	}
 	styles
 	{
-		CFriendNotificationOptionsDialog
-		{
-			render_bg
-			{
-				//Top
-				0="fill( x0, y0, x1, y0+39, FrameBorder )"
-				1="fill( x0, y0, x1, y0+40, Header_Dark )"
-			}
-		}
-		
 		Label
 		{
 			font-family=semibold
 			font-style=uppercase
-			font-size=14
 			textcolor=white
 		}
 	}
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-		place { control="frame_captiongrip" width=max height=40 }
-		
 		place { control="Label4,JoinGameNotifyCheck,JoinGamePlaySoundCheck,Label5,FriendOnlineNotifyCheck,FriendOnlinePlaySoundCheck,Label6,ReceiveMessageNotifyCheck,ReceiveMessagePlaySoundCheck" x=16 y=56 dir=down spacing=8 margin-right=16 }
-		
 		//Bottom
 		region { name=bottom align=bottom height=44 margin=8 }
 		place {	control="OKButton,Button1" region=bottom align=right spacing=8 height=28 width=84 }

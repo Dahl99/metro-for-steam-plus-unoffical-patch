@@ -75,10 +75,10 @@
 			TextEntry.IMEFGColor        "Black"
 			
 			// Friends List colors
-			Friends.InGameColor       "130 186 0 255"
-			Friends.OnlineColor       "93 178 255 255"
-			Friends.OfflineColor      "White45"
-			Friends.GoldenColor       "255 255 99 255"
+			Friends.InGameColor       "Friends_InGame"
+			Friends.OnlineColor       "Friends_Online"
+			Friends.OfflineColor      "Friends_Offline"
+			Friends.GoldenColor       "Friends_Golden"
 			Friends.PanelDefault      "White75"
 			Friends.PanelOver       "White"
 			Friends.PanelSelected     "ClientBG"

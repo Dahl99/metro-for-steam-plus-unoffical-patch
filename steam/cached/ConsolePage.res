@@ -90,7 +90,7 @@
 	}
 	layout
 	{
-		place { control="console" height=max width=max margin-bottom=28 dir=down }
-		place { control="entry" align=bottom height=28 width=max dir=down start=console }
+		place { control="entry" align=top height=28 width=max }
+		place { control="console" start=entry height=max width=max dir=down }
 	}
 }

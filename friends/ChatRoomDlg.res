@@ -61,7 +61,7 @@
 		{
 			"ControlName"		"Button"
 			style="Chat_MenuButton_withChrome"
-
+			
 		}
 	}
 
@@ -72,99 +72,78 @@
 			bgcolor=black24
 			render_bg
 			{
-        0="fill( x0-1, y0, x0, y1, FrameBorder )"
-        1="fill( x1, y0, x1+1, y1, FrameBorder )"
-      }
+        		1="fill( x0-1, y0, x0, y1, frameBorder )"
+        		2="fill( x1, y0, x1+1, y1, frameBorder )"
+      		}
 		}
 
 		label
 		{
-		font-size=14
-		textcolor=White45
-		bgcolor=ClientBG
-		font-style=uppercase
-		render_bg
-		{
-      0="fill( x0,y0,x1,y1, ClientBG )"
-      1="fill( x0, y0-1, x1, y0+1, Black25 )"
-		}
-		}
-
-		TextEntry
-		{
-			font-size=16
+			textcolor=White45
+			font-style=uppercase
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y0-1, x1, y0+1, Black25 )"
+			}
 		}
 
 		Chat_MenuButton_withChrome
-    {
-			textcolor=none
-			bgcolor=none
-			render_bg
-			{
-				0="image(x0,y0,x1,y1,graphics/tab_close_def)"
-			}
-			render
-			{
-				1="fill(x0,y0-4,x1+4,y0+50,white10)"
-			}
-    }
-
+		{
+			bgcolor="none"
+			render_bg{}
+			image="graphics/tab_close_def"
+			padding-left=-4
+		}
 		Chat_MenuButton_withChrome:hover
-    {
-			bgcolor=White12
-			render_bg
-			{
-				0="image(x0,y0,x1,y1,graphics/tab_close_def)"
-			}
-    }
-
+		{
+			bgcolor="none"
+			image="graphics/tab_close_hov"
+		}
 		Chat_MenuButton_withChrome:active
 		{
-			bgcolor=White24
-			render_bg
-			{
-				0="image(x0,y0,x1,y1,graphics/tab_close_hov)"
-			}
+			bgcolor="none"
+			image="graphics/tab_close_hov"
 		}
-	}
+	} 
 
 	layout
 	{
 		//Voice Chat Close Button
-		place { control="VoiceChat" y=47 align=right margin=4 width=16 height=16 dir=right end-right=Splitter }
+		place { control="VoiceChat" y=55 align=right margin=4 width=16 height=16 dir=right end-right=Splitter }
 
 		//Title Panel
-		place { control="TitlePanel" x=0 y=0 height=48 width=max margin-right=16 end-right=ChatActionsButton }
+		place { control="TitlePanel" x=0 y=0 height=56 width=max margin-right=16 end-right=ChatActionsButton }
 
 		//Menu Button
-		place { control="ChatActionsButton" height=46 width=46 align=right dir=right }
+		place { control="ChatActionsButton" height=54 width=54 align=right dir=right }
 
 		//Bar Height Override
 		place { control="GameInviteBar,TradeInviteBar,ChatInfoBar,VoiceBar,BIBar,BABar" height=54 }
 
 		place { control="Splitter" width=4 }
-		place { control="Splitter,UserList" align=right y=47 height=max margin-bottom=61 }
+		place { control="Splitter,UserList" align=right y=55 height=max spacing=4 margin-bottom=61 }
 
 		//Voice Chat Bar
-		place { control="VoiceBar" y=47 width=max height=54 dir=down end-right=VoiceChat }
+		place { control="VoiceBar" y=55 width=max height=54 dir=down end-right=VoiceChat }
 
-    //Bar Position Info
+		//Bar Position Info
 		place { control="TradeInviteBar,GameInviteBar,ChatInfoBar,BIBar,BABar,ChatHistory" start=VoiceBar end-right=Splitter y=0 width=max height=max align=right dir=down margin-bottom=61 margin-right=1 }
 
 		//Regions
 		region { name=bottom1 align=bottom height=71 width=max margin=8 }
 		region { name=bottom align=bottom height=40 }
 
-    //Text Box
+		//Text Box
 		place { control="TextEntry" region=bottom height=max width=max end-right=EmoticonButton }
 
-    //Emoticon Menu
-		place { control="EmoticonButton" region=bottom height=max align=right spacing=8 }
+		//Emoticon Menu
+		place { control="EmoticonButton" region=bottom height=max align=right margin-right=1 }
 
-    //Last Message Received
+		//Last Message Received
 		place { control="StatusLabel" region=bottom1 height=25 }
 
-    //Hidden
-		place { control="SendButton" height=0 width=0 }
+		//Hidden
+		place { control="SendButton" width=1 align=right }
 	}
 }

@@ -461,55 +461,40 @@
 	{
 		CDialogGameInfo
 		{
-			minimum-width=560
-			minimum-height=380
+			minimum-width=550
+			minimum-height=340
 		}
 		ListPanel
 		{
 			bgcolor=Header_Dark
-			padding-left=8
-			inset-right=0
 			render
 			{
-				0="fill(x0+8,y1-1,x1-8,y1,ClientBG)"
+				0="fill(x0+2,y1+2,x1-2,y1+3,white12)"
 			}
-		}
-		ListPanelInterior:scrollbar
-		{
-			padding-left=0
-			padding-right=0		
-		}
-		ListPanelColumnHeader
-		{
-			padding-left=4
-			inset-left=0
 		}
 		TextEntry
 		{
-			bgcolor=none
-			inset-left=0
-			textcolor=White45
+			inset-left=-2
+			textcolor=White50
+			bgcolor="none"
 		}
 		LabelDull
 		{
-			font-family=semilight
-			font-size=24
 			textcolor=white
+			font-family=semilight
+			font-size=22
+			font-size=20 [$OSX||$LINUX]
 		}
 		RadioButton
 		{
-			padding-bottom=0
 			render_bg
 			{
 				1="fill(x0-16,y0-30,x1,y1+4,Header_Dark)"
 			}
 		}
 	}
-
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-
 		//Top
 		region { name=top margin-bottom=44 }
 		region { name=info region=top x=0 y=40 margin-left=16 margin-right=8 width=max overflow=scroll-vertical }
@@ -518,33 +503,34 @@
 		//Name
 		place { region=info control=ServerLabel,ServerText dir=down margin-right=8 end-right=PlayerList }
 		//IP Address
-		place { region=info  control=ServerIPLabel,ServerIPText start=ServerText dir=down }
+		place { control=ServerIPLabel start=ServerText dir=down margin-right=8 end-right=PlayerList }
+		place { control=ServerIPText start=ServerIPLabel width=max dir=down margin-right=8 end-right=PlayerList }
 		//Game
-		place { region=info control=GameLabel start=ServerIPText dir=down }
+		place { control=GameLabel start=ServerIPText dir=down margin-right=8 end-right=PlayerList }
 		//Game Name
-		place { region=info control=GameText start=GameLabel dir=down width=max margin-right=8 end-right=PlayerList }
+		place { control=GameText start=GameLabel dir=down margin-right=8 end-right=PlayerList }
 		//Map
-		place { region=info control=MapLabel start=GameText dir=down }
+		place { control=MapLabel start=GameText dir=down margin-right=8 end-right=PlayerList }
 		//Map Name
-		place { region=info control=MapText start=MapLabel dir=down width=max margin-right=8 end-right=PlayerList }
+		place { control=MapText start=MapLabel dir=down margin-right=8 end-right=PlayerList }
 		//Players
-		place { region=info control=PlayersLabel start=MapText dir=down }
-		place { region=info control=PlayersText start=PlayersLabel dir=down width=max margin-right=8 end-right=PlayerList }
+		place { control=PlayersLabel start=MapText dir=down margin-right=8 end-right=PlayerList }
+		place { control=PlayersText start=PlayersLabel dir=down margin-right=8 end-right=PlayerList }
 		//VAC
-		place { region=info control=Label1 start=PlayersText dir=down }
-		place { region=info control=SecureText start=Label1 dir=down width=max margin-right=8 end-right=PlayerList }
+		place { control=Label1 start=PlayersText dir=down margin-right=8 end-right=PlayerList }
+		place { control=SecureText start=Label1 dir=down margin-right=8 end-right=PlayerList }
 		//Latency
-		place { region=info control=PingLabel start=SecureText dir=down }
-		place { region=info control=PingText start=PingLabel dir=down width=max margin-right=8 end-right=PlayerList }
-		
+		place { control=PingLabel start=SecureText dir=down margin-right=8 end-right=PlayerList }
+		place { control=PingText start=PingLabel dir=down margin-right=8 end-right=PlayerList }
+
 		//Content
-		region { name=container region=top y=40 margin-left=200 width=max margin-right=8 align=right }
-		place { region=container control="PlayerList" align=right y=8 width=600 height=max dir=down margin-bottom=82 }
-		place { region=container  start=PlayerList control="InfoLabel" width=max height=30 x=8 dir=down }
+		region { name=container region=top y=40 margin-left=170 width=max margin-right=8 align=right }
+		place { region=container control="PlayerList" align=right y=8 width=500 height=max dir=down margin-bottom=82 }
+		place { region=container start=PlayerList control="InfoLabel" width=max height=30 x=8 dir=down }
 		place { region=container start=InfoLabel control="AutoRetryAlert,AutoRetryJoin" width=max height=24 x=8 dir=down }
-		
+
 		//Bottom
 		region { name=bottom align=bottom height=44 margin=8 }
-		place {	control="AutoRetry,Connect,Refresh,Close" region=bottom align=right spacing=8 height=28 width=84 }		
+		place {	control="AutoRetry,Connect,Refresh,Close" region=bottom align=right spacing=8 height=28 width=84 }
 	}
 }

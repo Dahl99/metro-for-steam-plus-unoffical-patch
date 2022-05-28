@@ -1,11 +1,6 @@
 "resource/layout/overlay_achievement_item.layout"
 {
-	controls
-	{
-		icon { controlname="ImagePanel" scaleimage=1 }
-		caption { controlname=label labeltext="#Overlay_Achievement_Recent" }
-		name { controlname=label style=name }
-	}
+
 	colors
 	{
 	}
@@ -20,12 +15,13 @@
 		}
 		Label
 		{
-			font-size=18
 			textcolor=White35
+			font-size=18
+			font-size=16 [$OSX||$LINUX]
 		}
 		name
 		{
-		textcolor=White
+			textcolor=White
 		}
 	}
 

@@ -19,7 +19,6 @@
 			"ControlName"		"Button"
 			style="Chat_MenuButton_withChrome"
 		}
-
 		"StatusLabel"
 		{
 			"ControlName"		"Label"
@@ -31,41 +30,42 @@
 			style="voice_image"
 		}
 	}
-	
+
 	styles
 	{
 		CVoiceBar
 		{
-      bgcolor=White10
+			bgcolor=White10
 			render_bg
 			{
 				0="image(x0+6,y0+9,x1,y1,graphics/metro/icons/chat/phone)"
+				1="fill(x1,y0,x1+19,y1,White10)"
 			}
+			padding-right=-30
 		}
-		
 		status_label
 		{
-			font-family=semibold
-			textcolor=white
 			inset="0 0 0 0"
+			textcolor=white
+			font-family=semibold
 		}
-
 		voice_image
 		{
+			textcolor="none"
+			bgcolor="none"
+			render_bg{}
+			render{}
 		}
-
 		CVoiceTraffic
 		{
 		}
 	}
-	
+
 	layout
 	{
-
-		//Icon
-		place { control="VoiceImage" x=6 y=2 width=0 height=0 }
 		region { name=container height=54 }
 		//Content
+		place { control="VoiceImage" x=6 y=9 }
 		place { control="StatusLabel" align=left-center x=61 y=0 height=18 end-right=action2 margin-right=8 }
 		place { control="micvolume,speakervolume" align=left-center x=61 width=60 height=18 }
 

@@ -1,43 +1,26 @@
 "resource/layout/overlay_communityhubpanel.layout"
 {
-	controls
-	{
-		CommunityHubDetailPanel 
-		{ 
-			controlname="COverlay_Details_CommunityHub_Panel" 
-			style=detailsbox
-		}
-		TitleText { controlname="label" labeltext="#Overlay_CommunityHub_Panel_Title" style=detailsboxtitle }
-		NumContributionsText { controlname="label" labeltext="#Overlay_CommunityHub_Panel_NumContributions"  style=highlight }
 
-		ViewCommunityHub { controlname="Button" labeltext="#Overlay_View_CommunityHub" command="viewcommunityhub" }
-	}
-	
 	colors
 	{
-
-	}	
-	
+	}
 	styles
 	{
 		Button
 		{
-			bgcolor=none
-			image=graphics/metro/overlay/icons/hub
 			inset-left=-6
+			bgcolor="none"
+			image=graphics/metro/overlay/icons/hub
 		}
-		
 		Button:hover
 		{
 			image=graphics/metro/overlay/icons/hub_h		
 		}
-	
 		Button:active
 		{
 			image=graphics/metro/overlay/icons/hub_p		
 		}
 	}
-	
 	layout
 	{
 		//Left

@@ -305,28 +305,10 @@
 		"wrap"		"0"
 		"Default"		"0"
 	}
-	
-	styles
-	{
-		CInternetGames
-		{
-			bgcolor=ClientBG
-			render_bg
-			{
-				0="fill( x0, y1-44, x1, y1, FrameBorder )"
-				1="fill( x0, y1-43, x1, y1, Header_Dark )"
-			}
-		}
-	}
-	
 	layout
 	{
 		region { name="bottom" align=bottom height=44 margin=8 }
-	
 		place { control="gamelist" width=max height=max margin-bottom=44 }
-		
-		place { control="InternetGames" margin=0 height=max }
-		
 		place { control="AddServerButton,RefreshQuickButton,RefreshButton,ConnectButton" region="bottom" spacing=8 height=28 align=right }
 		place { control="Filter,FilterString" region="bottom" height=28 width=max margin-right=8 end-right="AddServerButton" spacing=8 }	
 	}

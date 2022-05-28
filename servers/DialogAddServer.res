@@ -201,8 +201,6 @@
 	}
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-		
 		region { name="header" margin=8 margin-top=0 y=40 }
 		place { region=header control=InfoLabel,ServerNameText dir=down width=max height=28 spacing=8 margin-right=8 end-right=OKButton }
 		place { region=header control=OKButton,TestServersButton start=ServerNameText margin-top=-28 dir=down align=right width=180 height=28 spacing=8 }

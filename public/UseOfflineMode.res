@@ -156,35 +156,40 @@
 	}
 	styles
 	{
-		CUseOfflineModeDialog
-		{
-			render_bg
-			{
-				0="fill( x0, y1-44, x1, y1, FrameBorder )"
-				1="fill( x0, y1-43, x1, y1, Header_Dark )"
-			}
-		}
 		"Label"
 		{
+			textcolor=white
 			font-family=light
 			font-weight=300
+		}
+		"Label" [$WIN32||$WINDOWS]
+		{
 			font-size=36
-			textcolor=white
+		}
+		"Label" [$OSX||$LINUX]
+		{
+			font-size=26
 		}
 		"URLLabel"
 		{
 			font-style=underline
 		}
+		//Hidden - steam process still runnning
+		FrameCloseButton
+		{
+			bgcolor="none"
+			render_bg{}
+			image=""
+		}
 	}
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-
 		place { control="Label1,URLLabel1" dir=down spacing=9 x=40 y=40 margin-top=-9 }
-		place { control="LabelAppearOffline,Label3" width=0 height=0 }
-
 		region { name=bottom align=bottom height=44 margin=8 }
 		place { control="RetryButton,OfflineModeButton" region=bottom align=left height=28 spacing=8 }
 		place { control="QuitButton" region=bottom align=right height=28 }
+
+		//Hidden
+		place { control="frame_close,LabelAppearOffline,Label3" width=1 align=right }
 	}
 }

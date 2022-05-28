@@ -16,15 +16,15 @@ Scheme
 		"Blank"				"1 1 1 0"
 		"TestColor"			"255 0 0 255"
 
-		// scheme-specific colors
+		// scheme-specific colors	
 		"OffWhite"			"216 222 211 255"
 		"DullGreen"			"216 222 211 255"
 		"Maize"				"196 181 80 255"
-
+		
 		"LightGrayBG"			"121 126 121 255"
 		"GrayBG"			"73 78 73 255"
 		"GrayBG2"			"82 89 78 255"
-
+		
 		SecBG				GrayBG2
 
 		"ClayBG"			"70 70 70 255"
@@ -46,12 +46,12 @@ Scheme
 		"GreenBG"			"76 88 68 255"
 		"LightGreenBG"			"90 106 80 255"		// darker background color
 		"DarkGreenBG"			"62 70 55 255"		// background color of text edit panes (chat, text entries, etc.)
-
+		
 		"DisabledText1"			"117 128 111 255"	// disabled text
 		"DisabledText2"			"40 46 34 255"		// overlay color for disabled text (to give that inset look
 
 		"NotificationBodyText"		"White"
-
+		
 		// button state text colors
 		"Normal"			"143 146 141 255"
 		"Over"				"196 181 80 255"		// same as Maize
@@ -63,13 +63,13 @@ Scheme
 		"TitleDimText"			"136 145 128 255"
 		"TitleBG"			"TestColor"
 		"TitleDimBG"			"TestColor"
-
+		
 		// border colors
 		"BorderBright"			"128 128 128 255"	// the lit side of a control
 		"BorderDark"			"40 46 34 255"		// the dark/unlit side of a control
 		"BorderSelection"		"0 0 0 255"		// the additional border color for displaying the default/selected button
 	}
-
+	
 
 	///////////////////// BASE SETTINGS ////////////////////////
 	//
@@ -78,7 +78,7 @@ Scheme
 	BaseSettings
 	{
 	}
-
+	
 	//////////////////////// layout /////////////////////////////
 	//
 	// describes default layouts for controls that have and control their own children
@@ -95,63 +95,66 @@ Scheme
 			frame_title
 			{
 				xpos	0
-				ypos	1
+				ypos	0
 				wide	max
-				tall	28
+				tall	40
 				AutoResize	1
 			}
 
 			frame_captiongrip
 			{
-				xpos	4
-				ypos	4
-				wide	r20
-				tall	60
+				xpos	0
+				ypos	0
+				wide	max
+				tall	40
 				AutoResize	1
 			}
 
 			frame_minimize
 			{
-				xpos	r45
+				xpos	r80
 				xpos	22 [$OSX]
-				ypos	7
-				ypos	3 [$OSX]
-				wide	20
-				tall	20
+				ypos	1
+				ypos	12 [$OSX]
+				wide	40
+				wide	24 [$OSX]
+				tall	38
+				tall	24 [$OSX]
 				PinCorner	1
 				PinCorner	0 [$OSX]
 			}
-
+			
 			frame_maximize
 			{
-				xpos	r59
+				xpos	r120
 				xpos	43 [$OSX]
-				ypos	7
-				ypos	3 [$OSX]
-				wide	20
-				tall	20
-				visible 0 [!$OSX]
+				ypos	1
+				ypos	12 [$OSX]
+				wide	40 
+				wide	24 [$OSX]
+				tall	38
+				tall	24 [$OSX]
 				PinCorner	1
 				PinCorner	0 [$OSX]
 			}			
 			frame_close
 			{
-				xpos	r29
+				xpos	r40
 				xpos	1 [$OSX]
-				ypos	7
-				ypos	3 [$OSX]
-				wide	20
-				tall	20
+				ypos	1
+				ypos	12 [$OSX]
+				wide	40
+				wide	24 [$OSX]
+				tall	38
+				tall	24 [$OSX]
 				PinCorner	1
 				PinCorner	0 [$OSX]
 			}
 
 			frame_brGrip
 			{
-				xpos	r15
-				ypos	r15
-				wide	14
-				tall	14
+				xpos	r10
+				ypos	r10
 				PinCorner	3
 			}
 		}
@@ -165,31 +168,30 @@ Scheme
 				wide	r9
 				tall	r48
 			}
-
 			// these buttons are still a bit special - if some of them are hidden, they shuffle
 			// across taking the place of other buttons to make sure there aren't gaps
 			ApplyButton
 			{
 				xpos	r101
 				ypos	r36
-				wide	92
-				tall	24
+				wide	84
+				tall	28
 			}
 
 			CancelButton
 			{
-				xpos	r203
+				xpos	r193
 				ypos	r36
-				wide	92
-				tall	24
+				wide	84
+				tall	28
 			}
 
 			OKButton
 			{
-				xpos	r304
+				xpos	r294
 				ypos	r36
-				wide	92
-				tall	24
+				wide	84
+				tall	28
 			}
 		}
 
@@ -197,47 +199,45 @@ Scheme
 		{
 			subpanel
 			{
-				xpos	10
-				ypos	28
-				wide	r10
+				xpos	16
+				ypos	40
+				wide	r16
 				tall	r48
 				AutoResize	3
 			}
-
 			PrevButton
 			{
-				xpos	r306
+				xpos	r276
 				ypos	r36
-				wide	92
-				tall	24
+				wide	84
+				tall	28
 				PinCorner	3
 			}
 			NextButton
 			{
-				xpos	r204
+				xpos	r184
 				ypos	r36
-				wide	92
-				tall	24
+				wide	84
+				tall	28
 				PinCorner	3
 			}
 			CancelButton
 			{
-				xpos	r102
+				xpos	r92
 				ypos	r36
-				wide	92
-				tall	24
+				wide	84
+				tall	28
 				PinCorner	3
 			}
 			FinishButton
 			{
-				xpos	r102
+				xpos	r184
 				ypos	r36
-				wide	92
-				tall	24
+				wide	84
+				tall	28
 				PinCorner	3
 			}
 		}
-
 	}
 
 	//
@@ -245,7 +245,7 @@ Scheme
 	//
 	// !! legacy, should set fonts in the style for a control
 	// this is just for reference by the code
-
+	
 	Fonts
 	{
 		"Default"
@@ -371,7 +371,7 @@ Scheme
 				"weight"	"0"
 				"symbol"	"1"
 			}
-
+	
 		}
 		"DefaultFixed"
 		{
@@ -441,7 +441,7 @@ Scheme
 			}
 		}
 	}
-
+	
 
 	//
 	//////////////////// APPEARANCES //////////////////////////////
@@ -487,7 +487,7 @@ Scheme
 				"6"		"image( x0, y0, x0 + 10, y0 + 10, graphics/btnStdTopLeft )"			// topleft
 				"7"		"image( x1 - 10, y1 - 10, x1, y1, graphics/btnStdBottomRight )"		// bottomright
 				"8"		"image( x0, y1 - 10, x0 + 10, y1, graphics/btnStdBottomLeft )"		// bottomleft
-			}
+			}		
 		}
 		ListPanelSlantBGWithBorder
 		{
@@ -527,8 +527,8 @@ Scheme
 			    "3"		"image( x1 - 2, y0 + 2, x1, y0 + 50, graphics/FriendsPanelRightBG )" //right
 			}
 		}
-
-
+		
+		
 		VoiceChatOffBG
 		{
 			inset				"1 1 1 1"
@@ -567,7 +567,7 @@ Scheme
 					"0"		"gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, ChatGradientTop, ChatGradientBottom )"
 				}
 		}
-
+		
 		ChatInviteBG
 		{
 			inset				"1 1 1 1"
@@ -587,7 +587,7 @@ Scheme
 					"0"		"fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DarkGray )"
 				}
 		}
-
+		
 		FriendPanelDefault
 		{
 			render_bg
@@ -614,7 +614,7 @@ Scheme
 			    "2"		"fill(  x0 + 2, y0 + 2, x1, y1, Friends.PanelSelected )"			// body
 			}
 		}
-
+		
 		FriendPanelAffordanceMouseover
 		{
 			render_bg

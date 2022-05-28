@@ -137,33 +137,21 @@
 	}
 	styles
 	{
-		Frame
-		{
-			minimum-width=300
-			render_bg
-			{
-				//0="fill(x0,y1-44,x1,y1,Header_Dark)"
-				//0="fill(x0+8,y1-44,x1-8,y1-43,White12)"
-			}
-		}
 		LabelDull
 		{
-			font-family=semilight
-			font-size=24
 			textcolor=white
+			font-family=semilight
+			font-size=22
+			font-size=20 [$OSX||$LINUX]
 		}
 	}
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-		place { control="frame_captiongrip" width=max height=max }
-		
-		place { control="GameLabel,InfoLabel,PasswordEntry,ConnectButton" y=27 margin=8 margin-top=0 dir=down width=max height=28 }
+		place { control="GameLabel,InfoLabel" y=44 dir=down spacing=2 margin=8 }
+		place { start=InfoLabel control="PasswordEntry" y=8 height=28 dir=down margin-right=8 }
+		place { start=PasswordEntry control="ConnectButton" x=8 width=max height=28 margin-right=8 }
 
-		//Bottom
-		region { name=bottom align=bottom height=44 margin=8 }
-		place {	control="ConnectButton,CancelButton" region=bottom align=right spacing=8 width=84 height=28 }
-		
-		place {	control="PasswordLabel" width=0 height=0 }
+		//Hidden
+		place {	control="PasswordLabel,CancelButton" margin-left=-999 }
 	}
 }

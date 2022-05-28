@@ -34,16 +34,16 @@
 
 		Button:hover
     {
-			bgcolor=White12
+			bgcolor=none
 			render_bg
 			{
-				0="image(x0,y0,x1,y1,graphics/tab_close_def)"
+				0="image(x0,y0,x1,y1,graphics/tab_close_hov)"
 			}
     }
 		
 		Button:active
 		{
-			bgcolor=White24
+			bgcolor=none
 			render_bg
 			{
 				0="image(x0,y0,x1,y1,graphics/tab_close_hov)"

@@ -4,101 +4,72 @@
 	{
 		AccountPersonaStyleOffline
 		{
+			bgcolor=bgOfflineNick
+			textcolor=offlineNick
 			padding-right=8
 			padding-left=12
-			textcolor=Friends.OfflineColor
+			render_bg
+			{
+				0="fill(x0-33, y0+3, x0+1, y1-2, bgOfflineNearAvatar)"
+			}
 		}
 
 		AccountPersonaStyleOnline
 		{
+			bgcolor=bgOnlineNick
+			textcolor=onlineNick
 			padding-right=8
 			padding-left=12
-			textcolor=Friends.OnlineColor
 			render_bg
-		  	{
-				0="gradient_horizontal( x0, y0 - 1, x0 + 2, y1 + 1, Friends.OnlineColor, DialogBG )"
+			{
+				0="fill(x0-33, y0+3, x0+1, y1-2, bgOnlineNearAvatar)"
 			}
 		}
 
 		AccountPersonaStyleInGame
 		{
+			bgcolor=bgIngameNick
+			textcolor=ingameNick
 			padding-right=8
 			padding-left=12
-			textcolor=Friends.InGameColor
 			render_bg
-		  	{
-				0="gradient_horizontal( x0, y0 - 1, x0 + 2, y1 + 1, Friends.InGameColor, DialogBG )"
+			{
+				0="fill(x0-33, y0+3, x0+1, y1-2, bgIngameNearAvatar)"
 			}
 		}
-		
+
 		AccountDropDownStyleOffline
 		{
-			render_bg
-		  	{
-				1="image( x0, y0+10, x1, y1, graphics/dropdown_offline )"
-			}
-			
+			bgcolor=none
 		}
-		
+
 		AccountDropDownStyleOnline
 		{
-
-			bgcolor=transparent
-			render_bg
-		  	{
-				1="image( x0, y0 + 10, x1, y1, graphics/dropdown_online )"
-			}
+			bgcolor=none
 		}
-		
+
 		AccountDropDownStyleInGame
 		{
-			render_bg
-		  	{
-				1="image( x0, y0+10, x1, y1, graphics/dropdown_ingame )"
-			}
-		}
-
-		AccountButtonStyle
-		{
-			bgcolor = transparent
-			render_bg
-		  	{
-				// background fill
-				0="fill( x0, y0, x1, y1, dark_blue )"
-			}
-		}
-
-		AccountButtonStyle:hover
-		{
-			render_bg
-		  	{
-				// background fill
-				0="fill( x0, y0, x1, y1, darkblue )"
-			}
+			bgcolor=none
 		}
 
 		AccountBalanceStyle
 		{
-			textcolor=white45
-			bgcolor="none"
-			font-family=basefont
-			font-size=14
-			font-weight=400
-			font-style=regular
-			padding-top=1
-			padding-right=8
-		}
-		
-		AccountMenuButtonStyle
-		{
-			bgcolor=transparent
+			textcolor=textCash
+			bgcolor=bgTextCash
+			padding-right=14
+			padding-left=8
 		}
 
+		AccountMenuButtonStyle
+		{
+			bgcolor=none
+		}
 		AccountMenuButtonStyle:hover
 		{
 			bgcolor=white05
-		}
 
+		}
 		AccountMenuButtonStyle:active
 		{
 			bgcolor=white10
@@ -107,12 +78,12 @@
 
 	layout
 	{
-		place { control="account_menu_button" height=39 width=max }
+		place { control="account_menu_button" align=left height=39 width=max } // span over everything
+		place { control="account_persona" align=right height=39 }
+		place { control="account_avatar" align=right end-right="account_persona" margin-top=4 height=32 width=32 }
+		place { control="account_balance" align=right end-right="account_avatar" height=39 }
 
-		place { control="account_avatar" align=right height=39 width=39 end-right=account_persona }
-		place { control="account_persona" align=right x=39 height=39 end-right=account_balance }
-		place { control="account_balance" align=right x=39 height=39 }
-
-		place { control="account_drop_down" margin-left=-9999 }
+		//hidden
+		place { control="account_drop_down" margin-left=-999 }
 	}
 }

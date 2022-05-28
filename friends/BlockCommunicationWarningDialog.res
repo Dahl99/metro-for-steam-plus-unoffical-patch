@@ -111,19 +111,13 @@
 		"textAlignment"		"north-west"
 		"wrap"		"1"
 	}
-	styles
-	{
-	}
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-		place { control="frame_captiongrip" width=max height=54 }
-
-		place { control="Label3" margin=16 y=40 width=max }
-		
+		region { name=top align=center width=max height=max margin-top=44 margin-bottom=44 margin-left=16 margin-right=16 }
+		place { control="Label3" y=8 region=top width=max }
 		//Bottom
 		region { name=bottom align=bottom height=44 margin=8 }
-		place { control="DontShowAgain" region=bottom x=8 }
+		place { control="DontShowAgain" region=bottom align=left x=8 }
 		place {	control="ContinueButton,CancelButton" region=bottom align=right spacing=8 height=28 }
 	}
 }

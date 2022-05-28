@@ -1,34 +1,22 @@
 "resource/layout/gamespage_details_cloud_file.layout"
 {
-	controls
-	{
-		title { controlname="Label" style="titlestyle" }
-		message { controlname="Label" style="messagestyle" }
-		launchsession { controlname="Button" labelText="#Steam_TurnNotifications_LaunchSession" }
-	}
 
 	styles
 	{
 		titlestyle
-		{ 
-			font-size=18
+		{
 		}
-
 		messagestyle
-		{ 
-			font-size=14
+		{
 		}
-
 		turnnotification_odd
 		{
 		}
-
 		turnnotification_even
 		{
 			bgcolor="10 36 56 175"
 		}
 	}
-
 	layout
 	{
 		region { name=column1 margin=0 x=0 y=0 width=max }

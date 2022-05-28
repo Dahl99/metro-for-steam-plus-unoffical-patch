@@ -196,14 +196,12 @@
 		"Labeltext"		"#Steam_CloudEnableLinkContinued"
 		"tall"			"28"
 	}
-	
 	styles
 	{
 		CloudUsageLabelStyle:disabled
 		{
 			textcolor=White25
 		}
-		
 		CSubGamePropertiesUpdatesPage
 		{
 			bgcolor=ClientBG
@@ -214,14 +212,11 @@
 			}
 		}
 	}
-	
 	layout
 	{
 		place { control="UpdateCombo,UpdateNewsURL" x=16 y=42 margin-top=24 dir=down spacing=8	}
 		place { control="CloudInfoLabel,EnableCloudCheck,CloudUsageLabel" start=UpdateNewsURL y=35 margin-top=24 dir=down spacing=8	}
-		
 		place { control="CloudEnableLinkLabel,CloudEnableLinkLabelExtraText" x=20 y=268 height=28 dir=right spacing=4 wrap=1 }
-		
 		//Hidden
 		place { control="320,Divider1,UpdateInfoText,CloudLabel" height=0 }
 	}

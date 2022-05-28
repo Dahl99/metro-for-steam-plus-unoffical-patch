@@ -1,232 +1,28 @@
 "resource/FileOpenDialog.res"
 {
-	"FileOpenDialog"
+	styles
 	{
-		"ControlName"		"FileOpenDialog"
-		"fieldName"		"FileOpenDialog"
-		"xpos"		"594"
-		"ypos"		"350"
-		"wide"		"731"
-		"tall"		"440"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"settitlebarvisible"		"1"
-	}
-	"FullPathEdit"
-	{
-		"ControlName"		"ComboBox"
-		"fieldName"		"FullPathEdit"
-		"xpos"		"120"
-		"ypos"		"45"
-		"wide"		"539"
-		"tall"		"24"
-		"AutoResize"		"1"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"textHidden"		"0"
-		"editable"		"0"
-		"maxchars"		"-1"
-		"NumericInputOnly"		"0"
-		"unicode"		"0"
-	}
-	"FileList"
-	{
-		"ControlName"		"CFileOpenListPanel"
-		"fieldName"		"FileList"
-		"xpos"		"10"
-		"ypos"		"77"
-		"wide"		"710"
-		"tall"		"278"
-		"AutoResize"		"3"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-	}
-	"FileNameEdit"
-	{
-		"ControlName"		"FileCompletionEdit"
-		"fieldName"		"FileNameEdit"
-		"xpos"		"120"
-		"ypos"		"361"
-		"wide"		"500"
-		"tall"		"24"
-		"AutoResize"		"1"
-		"PinCorner"		"2"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"textHidden"		"0"
-		"editable"		"1"
-		"maxchars"		"-1"
-		"NumericInputOnly"		"0"
-		"unicode"		"0"
-	}
-	"FileTypeCombo"
-	{
-		"ControlName"		"ComboBox"
-		"fieldName"		"FileTypeCombo"
-		"xpos"		"120"
-		"ypos"		"391"
-		"wide"		"500"
-		"tall"		"24"
-		"AutoResize"		"1"
-		"PinCorner"		"2"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"textHidden"		"0"
-		"editable"		"0"
-		"maxchars"		"-1"
-		"NumericInputOnly"		"0"
-		"unicode"		"0"
-	}
-	"OpenButton"
-	{
-		"ControlName"		"Button"
-		"fieldName"		"OpenButton"
-		"xpos"		"628"
-		"ypos"		"361"
-		"wide"		"92"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#FileOpenDialog_Open"
-		"textAlignment"		"west"
-		"wrap"		"0"
-		"Default"		"0"
-	}
-	"CancelButton"
-	{
-		"ControlName"		"Button"
-		"fieldName"		"CancelButton"
-		"xpos"		"628"
-		"ypos"		"391"
-		"wide"		"92"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#FileOpenDialog_Cancel"
-		"textAlignment"		"west"
-		"wrap"		"0"
-		"Command"		"CloseModal"
-		"Default"		"0"
-	}
-	"FolderUpButton"
-	{
-		"ControlName"		"Button"
-		"fieldName"		"FolderUpButton"
-		"xpos"		"665"
-		"ypos"		"45"
-		"tooltiptext"		"#FileOpenDialog_ToolTip_Up"
-		"wide"		"24"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"1"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"textAlignment"		"center"
-		"wrap"		"0"
-		"Default"		"0"
-	}
-	"NewFolderButton"
-	{
-		"ControlName"		"Button"
-		"fieldName"		"NewFolderButton"
-		"xpos"		"695"
-		"ypos"		"45"
-		"tooltiptext"		"#FileOpenDialog_ToolTip_NewFolder"
-		"wide"		"24"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"1"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"textAlignment"		"center"
-		"wrap"		"0"
-		"Default"		"0"
-	}
-	"LookInLabel"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"LookInLabel"
-		"xpos"		"10"
-		"ypos"		"45"
-		"wide"		"55"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#FileOpenDialog_Look_in"
-		"textAlignment"		"west"
-		"associate"		"FullPathEdit"
-		"wrap"		"0"
-	}
-	"FileNameLabel"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"FileNameLabel"
-		"xpos"		"10"
-		"ypos"		"361"
-		"wide"		"120"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"2"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#FileOpenDialog_File_Name"
-		"textAlignment"		"west"
-		"associate"		"FileNameEdit"
-		"wrap"		"0"
-	}
-	"FileTypeLabel"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"FileTypeLabel"
-		"xpos"		"10"
-		"ypos"		"391"
-		"wide"		"120"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"2"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#FileOpenDialog_File_Type"
-		"textAlignment"		"west"
-		"associate"		"FileTypeCombo"
-		"wrap"		"0"
+		ComboBox
+		{
+			bgcolor=TextEntry
+			render_bg{}
+		}
 	}
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+		//Top
+		place { control="LookInLabel" x=8 y=48 align=left }
+		place { start=LookInLabel control="FullPathEdit" x=6 width=max margin-right=69 }
+		place { start=FullPathEdit control="FolderUpButton,NewFolderButton" x=6 width=24 height=24 spacing=6 margin-right=8 }
+		//Bottom-First Row
+		region { name="first" align=bottom width=max height=60 }
+		place { region=first control="FileNameLabel" x=8 width=110 align=left margin-bottom=8 }
+		place { region=first start=FileNameLabel control="FileNameEdit" width=max height=24 margin-bottom=8 margin-right=108 }
+		place { region=first start=FileNameEdit control="OpenButton" align=right width=92 height=24 margin-bottom=8 margin-right=8 }
+		//Bottom-Second Row
+		region { name="second" align=bottom width=max height=30 }
+		place { region=second control="FileTypeLabel" x=8 width=110 align=left margin-bottom=8 }
+		place { region=second start=FileTypeLabel control="FileTypeCombo" width=max height=24 margin-bottom=8 margin-right=108 }
+		place { region=second start=FileTypeCombo control="CancelButton" align=right width=92 height=24 margin-bottom=8 margin-right=8 }
 	}
 }

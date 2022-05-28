@@ -122,4 +122,15 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
+  styles
+	{
+	}
+	layout
+	{
+		place { control=infolabel,StatusLabel x=16 y=32 width=max spacing=6 dir=down margin-right=16 }
+
+		place { start=StatusLabel control=ProgressBar y=6 dir=down }
+		place { start=ProgressBar control=BytesProgressLabel,DiskProgressLabel width=max spacing=6 dir=down margin-right=16 }
+    place { start=DiskProgressLabel control=ProgressBarSingleDisk y=6 dir=down }
+	}
 }

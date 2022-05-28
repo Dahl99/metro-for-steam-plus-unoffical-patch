@@ -394,46 +394,35 @@
 		"textAlignment"		"east"
 		"wrap"		"0"
 	}
-
 	styles
 	{
 		Label
 		{
 			font-family=semilight
-			font-size=24
 			textcolor=white
 		}
-		
 		ListPanel
 		{
-			//bgcolor=Header_Dark
 			render
 			{
 				0="fill(x0,y0,x0+1,y1,Header_Dark)"
 			}
 		}
-		
-		ComboBox
-		{
-			minimum-width=168
-		}
-		
-		TextEntry
-		{
-			minimum-width=168
-		}
 	}
-
 	layout
 	{
 		region { name="bottom" align=bottom height=44 margin=8 }
 		region { name="left" y=8 width=200 margin-left=16 margin-bottom=44 }
-		
-		place { region=left spacing=4 control="GameFilterLabel,GameFilter,MapFilterLabel,MapFilter,PingFilterLabel,PingFilter,SecureFilterLabel,SecureFilter,ServerFullFilterCheck,ServerEmptyFilterCheck,NoPasswordFilterCheck" dir=down margin-right=8 }
 
-		//Contained place { control="gamelist" y=8 margin-right=8 x=200 width=max height=max margin-bottom=52 }
-		place { control="gamelist" y=0 margin-right=0 x=200 width=max height=max margin-bottom=44 }
-	
+		place { region=left control="GameFilterLabel,GameFilter,MapFilterLabel,MapFilter" dir=down spacing=4 margin-right=8 }
+		place { start=MapFilter control="PingFilterLabel" y=4 dir=down margin-right=8 }
+		place { start=PingFilterLabel control="PingFilter" y=4 width=164 dir=down margin-right=8 }
+		place { start=PingFilter control="SecureFilterLabel" y=4 dir=down margin-right=8 }
+		place { start=SecureFilterLabel control="SecureFilter" y=4 width=164 dir=down margin-right=8 }
+
+		place { start=SecureFilter control="ServerFullFilterCheck,ServerEmptyFilterCheck,NoPasswordFilterCheck" y=4 height=24 dir=down spacing=4 margin-right=8 }
+
+		place { control="gamelist" x=200 y=0 width=max height=max margin-bottom=44 margin-right=0 }
 		place { control="AddServerButton,RefreshQuickButton,RefreshButton,ConnectButton" region="bottom" spacing=8 height=28 align=right }
 		place { control="Filter,FilterString" region="bottom" height=28 width=max margin-right=8 end-right="AddServerButton" spacing=8 }	
 	}
