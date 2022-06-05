@@ -17,10 +17,10 @@ jobs:
       - name: Create release archives
         run: |
           sudo apt install zip
-          zip -r metro-for-steam-skin.zip metro-for-steam-skin
-          tar -czf metro-for-steam-skin.tar.gz metro-for-steam-skin
+          zip -r metro-for-steam-plus-unofficial-patch.zip metro-for-steam-plus-unofficial-patch
+          tar -czf metro-for-steam-plus-unofficial-patch.tar.gz metro-for-steam-plus-unofficial-patch
         
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "metro-for-steam-skin.zip,metro-for-steam-skin.tar.gz"
+          artifacts: "metro-for-steam-plus-unofficial-patch.zip,metro-for-steam-plus-unofficial-patch.tar.gz"
 
