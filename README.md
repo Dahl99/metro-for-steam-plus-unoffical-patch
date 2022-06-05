@@ -17,7 +17,7 @@ This is just a forked version of [Metro For Steam](https://github.com/minischett
 
 ### Friends and chat
 
-- [x] Removed message preview
+- [ ] Removed message preview
 
 ### High dpi
 
@@ -27,9 +27,9 @@ This is just a forked version of [Metro For Steam](https://github.com/minischett
 
 - [ ] Big picture button
 - [ ] Big picture button + green notification box
-- [x] Big picture button + green notification icon
+- [ ] Big picture button + green notification icon
 - [ ] Green notification box
-- [ ] Green notification icon
+- [x] Green notification icon
 - [x] Lowercase username
 - [ ] No dropmenu profile text
 
@@ -54,6 +54,11 @@ This is just a forked version of [Metro For Steam](https://github.com/minischett
 
 ## License
 
-All contents of this repository are licensed under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International** license, also known as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0). Please consult the license page for additional details about your usage rights.
+- Metro for Steam [MIT License](https://choosealicense.com/licenses/mit/)
 
-Above license **does not cover** specific code, graphic and other content created and licensed exclusively to **Metro for Steam** author, [Dominic Minischetti](https://github.com/minischetti).
+- Unofficial Patch [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg

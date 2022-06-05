@@ -137,23 +137,10 @@
 		"wrap"		"0"
 		"font"		FriendsSmall
 	}
-
 	colors
 	{
 		Black="0 0 0 0"
 	}
-
-	styles
-	{
-		notification
-		{
-			render_bg
-			{
-				0="image(x0+60,y0+35,x1,y1,graphics/msgnotify)"
-			}
-		}
-	}
-
 	layout
 	{
 		//Avatar
@@ -161,12 +148,9 @@
 
 		//Panel
 		region { name=panel height=74 overflow=scroll-vertical }
-		place { control="LabelSender" region=panel x=60 y=6 dir=down margin=11 margin-left=0 margin-bottom=0 }
+		place { control="LabelSender,LabelMessage" region=panel x=67 y=6 dir=down margin=11 margin-left=0 margin-bottom=0 }
 
 		//Footer
 		place { control="LabelHotkey,LabelInfo" y=76 width=250 }
-
-		//Hidden
-		place { control="LabelMessage" margin-left=-999 }
 	}
 }
