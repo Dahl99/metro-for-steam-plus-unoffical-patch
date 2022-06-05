@@ -2,6 +2,13 @@
 
 This is just a forked version of [Metro For Steam](https://github.com/minischetti/metro-for-steam) with the fixes and some extra customizations from the [Unofficial Patch for Metro for Steam skin](https://github.com/redsigma/UPMetroSkin) and no changes has been made to either of the sources.
 
+## Installation instructions
+
+1. Download the skin from [releases](https://github.com/Dahl99/metro-for-steam-plus-unofficial-patch/releases)
+2. Extract the contents and place the **metro-for-steam-plus-unofficial-patch** folder within the Steam skins folder. On Windows the steam skins folder is often located at **C:\Program Files (x86)\Steam\skins**
+3. In Steam go to settings -> interface and select **metro-for-steam-plus-unofficial-patch** in the dropdown menu
+4. Restart Steam and you're done!
+
 ## Features from unofficial patch
 
 - [x] Main files
